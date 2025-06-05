@@ -1,6 +1,5 @@
 const db = require("../config/database");
 
-// GET ALL NOTES
 const getNote = (req, res) => {
   db.query("SELECT * FROM note_dbs ORDER BY createdAt DESC", (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
@@ -8,7 +7,6 @@ const getNote = (req, res) => {
   });
 };
 
-// CREATE NOTE
 const createNote = (req, res) => {
   const { date, title, message, author } = req.body;
   const createdAt = new Date();
