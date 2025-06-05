@@ -1,0 +1,28 @@
+GET http://localhost:5000/notes
+
+###
+
+POST http://localhost:5000/add-note
+Content-Type: application/json
+
+{
+  "date": "2025-03-03",
+  "title": "Test title",
+  "message": "This is test message for backend test",
+  "author": "Zulfikar Ajie"
+}
+
+###
+
+PUT http://localhost:5000/edit-note/1
+Content-Type: application/json
+
+{
+  "date": "2025-03-04",
+  "title": "Test title",
+  "message": "This is test message for backend test",
+  "author": "Zulfikar Ajie"
+}
+
+###
+DELETE http://localhost:5000/delete-note/1
